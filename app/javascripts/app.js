@@ -7,6 +7,8 @@ var app = express();
 app.set('views', '../views');
 app.set('view engine', 'ejs');
 
+app.use(express.static('..'));
+
 app.get('/', function(reg, res) { // GET request
 	res.render('tweets');
 });
