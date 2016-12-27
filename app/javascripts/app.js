@@ -64,3 +64,7 @@ app.post('/tweets/create', function(req, res) {
     res.redirect('/');
   });
 });
+
+app.get('/tweets/:id([0-9]+)/edit', function(req, res) {
+	res.send(req.params.id);
+});
