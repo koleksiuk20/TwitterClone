@@ -6,8 +6,10 @@
   <body>
     <header></header>
     <main>
-      <h1>Twitter Clone</h1>
-      <p>Example text</p>
+      <form id="tweet-form" action="tweets/create" method="POST">
+        <input id="tweet-form-handle" type="text" name="handle" placeholder="KunkkaBlade">
+        <textarea id="tweet-form-body" name="body" placeholder="What's going on?"></textarea>
+      </form>
     </main>
   </body>
 </html>
