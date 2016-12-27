@@ -61,3 +61,13 @@ main {
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+/* Tweet styles */
+.tweet {
+	padding: 10px 12px;
+	border-top: 1px solid #e1e8ed;
+}
+
+.light-grey {
+	color: #8899a6;
+}
