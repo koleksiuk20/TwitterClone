@@ -4,8 +4,11 @@
 var express = require('express');
 var app = express();
 
+app.set('views', '../views');
+app.set('view engine', 'ejs');
+
 app.get('/', function(reg, res) { // GET request
-	res.send('Hello World');
+	res.render('tweets');
 });
 
 app.listen(8080, function() { // listening on port 8080
