@@ -1,8 +1,10 @@
-<article class="tweet">
-  <p>
-    <a href="http://twitter.com/<%= tweet.handle %>">@<%= tweet.handle %></a>
-    <span class="light-grey"> - <%= tweet.time_from_now %></span>
-  </p>
-  <p><%= tweet.body %></p>
-  <p><a href="/tweets/<%= tweet.id %>/edit" id="tweet-form-edit-button">Edit</a></p>
-</article>
+<div class="single-tweet">
+	<article class="tweet">
+	  <p>
+	    <a href="http://twitter.com/<%= tweet.handle %>">@<%= tweet.handle %></a>
+	    <span class="light-grey"> - <%= tweet.time_from_now %></span>
+	  </p>
+	  <p><%= tweet.body %></p>
+	  <p><a href="/tweets/<%= tweet.id %>/edit" id="tweet-form-edit-button">Edit</a></p>
+	</article>
+</div>

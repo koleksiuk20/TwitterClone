@@ -25,15 +25,16 @@ header {
 main {
 	width: 600px;
 	margin: 60px auto 0px auto;
-	background-color: #fff;
-	border: 1px solid #e1e8ed;
-	border-radius: 6px;
+	background-color: #f5f8fa;
 }
 
 /* Form styles */
 #tweet-form {
+	margin-bottom: 20px;
 	padding: 10px 12px;
 	background-color: #e8f4fb;
+	border: 1px solid #e1e8ed;
+	border-radius: 10px;
 }
 
 #tweet-form-handle {
@@ -86,9 +87,15 @@ main {
 }
 
 /* Tweet styles */
+.single-tweet {
+	margin-bottom: 20px;
+}
+
 .tweet {
 	padding: 10px 12px;
-	border-top: 1px solid #e1e8ed;
+	background-color: #fff;
+	border: 1px solid #e1e8ed;
+	border-radius: 10px;
 }
 
 .light-grey {
