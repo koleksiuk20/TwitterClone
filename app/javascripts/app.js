@@ -66,5 +66,16 @@ app.post('/tweets/create', function(req, res) {
 });
 
 app.get('/tweets/:id([0-9]+)/edit', function(req, res) {
-	res.send(req.params.id);
+	var query = 'SELECT * FROM Tweets WHERE id = ?';
+	var id = req.params.id;
+
+	connection.query(query, [id], function(err, results) {
+		if(err || results.length === 0) {
+			console.log(err || 'No tweet found');
+			res.redirect('/');
+			return;
+		}
+
+		res.send('edit-tweet', { tweet: results[0] });
+	});
 });
