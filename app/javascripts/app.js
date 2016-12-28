@@ -12,6 +12,13 @@ var connection = mysql.createConnection({
   database: 'twitter'
 });
 
+app.set('views', '../views');
+app.set('view engine', 'ejs');
+
+app.use(express.static('..'));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Check connection to the database
 connection.connect(function(err) {
   if(err) {
     console.log(err);
@@ -25,12 +32,7 @@ connection.connect(function(err) {
   });
 });
 
-app.set('views', '../views');
-app.set('view engine', 'ejs');
-
-app.use(express.static('..'));
-app.use(bodyParser.urlencoded({ extended: true }));
-
+// Tweet timestamp
 app.get('/', function(req, res) {
 	var query = 'SELECT * FROM Tweets ORDER BY created_at DESC';
 
@@ -48,6 +50,7 @@ app.get('/', function(req, res) {
 	});
 });
 
+// Create Tweet
 app.post('/tweets/create', function(req, res) {
   var query = 'INSERT INTO Tweets(handle, body) VALUES(?, ?)';
   var handle = req.body.handle;
@@ -65,6 +68,7 @@ app.post('/tweets/create', function(req, res) {
   });
 });
 
+// Edit Tweet
 app.get('/tweets/:id([0-9]+)/edit', function(req, res) {
 	var query = 'SELECT * FROM Tweets WHERE id = ?';
 	var id = req.params.id;
@@ -83,6 +87,7 @@ app.get('/tweets/:id([0-9]+)/edit', function(req, res) {
 	});
 });
 
+// Update and remove Tweet
 app.post('/tweets/:id([0-9]+)/update', function(req, res) {
 	var updateQuery = 'UPDATE Tweets SET body = ?, handle = ? WHERE id = ?';
 	var deleteQuery = 'DELETE FROM Tweets WHERE id = ?';
