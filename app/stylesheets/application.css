@@ -10,16 +10,18 @@ body {
 	box-sizing: inherit;
 }
 
+/* Header styles */
 header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
+	height: 50px;
 	background-color: #fff;
 	border-bottom: 1px solid #d9d9d9;
-	height: 50px;
 }
 
+/* Main content styles */
 main {
 	width: 600px;
 	margin: 60px auto 0px auto;
@@ -35,27 +37,27 @@ main {
 }
 
 #tweet-form-handle {
-	font-size: 14px;
+	width: 100%;
 	margin-bottom: 8px;
 	padding: 8px 10px;
+	font-size: 14px;
 	border: 1px solid #a3d4f2;
 	border-radius: 3px;
-	width: 100%;
 }
 
 #tweet-form-body {
-	font-size: 14px;
+	width: 100%;
 	margin-bottom: 8px;
 	padding: 8px 10px;
+	font-size: 14px;
 	border: 1px solid #a3d4f2;
 	border-radius: 3px;
-	width: 100%;
 }
 
 #tweet-form-button {
-	color: #fff;
-	font-size: 14px;
 	padding: 7px 8px;
+	font-size: 14px;
+	color: #fff;
 	background-color: #1b95e0;
 	border: 1px solid transparent;
 	border-radius: 5px;
@@ -63,21 +65,20 @@ main {
 }
 
 #tweet-form-edit-button {
-	color: #fff;
-	font-size: 14px;
 	padding: 7px 8px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
 	background-color: #1b95e0;
 	border: 1px solid transparent;
 	border-radius: 4px;
-	text-decoration: none;
 	cursor: pointer;
-
 }
 
 #tweet-form-delete-button {
-	color: #fff;
-	font-size: 14px;
 	padding: 7px 8px;
+	font-size: 14px;
+	color: #fff;
 	background-color: #e53334;
 	border: 1px solid transparent;
 	border-radius: 4px;
