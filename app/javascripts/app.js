@@ -1,5 +1,6 @@
 'use strict'
 
+// Variables
 var mysql = require('mysql');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -12,6 +13,7 @@ var connection = mysql.createConnection({
   database: 'twitter'
 });
 
+// Express settings
 app.set('views', '../views');
 app.set('view engine', 'ejs');
 
@@ -55,9 +57,6 @@ app.post('/tweets/create', function(req, res) {
   var query = 'INSERT INTO Tweets(handle, body) VALUES(?, ?)';
   var handle = req.body.handle;
   var body = req.body.body;
-
-  console.log("Handle: " + handle);
-  console.log("Body: " + body);
 
   connection.query(query, [handle, body], function(err) {
     if(err) {
